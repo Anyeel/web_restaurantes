@@ -13,5 +13,8 @@
   "type": "module",
   "dependencies": {
     "nunjucks": "^3.2.4"
+  },
+  "devDependencies": {
+    "standard": "^17.1.2"
   }
 }

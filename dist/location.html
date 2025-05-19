@@ -9,15 +9,29 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 </head>
 <header>
-  {% include "navbar.njk" %}
+  <a href="">Menu</a>
+<a href="">Sobre nosotros</a>
+<a href="">Donde encontrarnos</a>
 </header>
 <body>
   <main>
     <div>
       <img src="imgs/logo.png" alt="Logo">  
     </div>
-    {% block content %}
-    {% endblock %}
+    
+<div id="map" style="height: 400px;"></div>
+<script>
+    var map = L.map('map').setView([37.1556821, -3.5949996], 12);
+
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    L.marker([37.15, -3.59]).addTo(map)
+        .bindPopup('Restaurante Juanmita')
+        .openPopup();
+</script>
+
   </main>
 </body>
 </html>
