@@ -3,7 +3,7 @@ name: CI/CD Nunjucks
 on:
   push:
     branches:
-      - master  # Cambia a "master" si usas ese nombre
+      - main  # Cambia a "master" si usas ese nombre
 
 permissions:
   contents: write
