@@ -18,8 +18,11 @@ if (!fs.existsSync('./dist')) {
 }
 const menuTemplate = './views/menu.njk'
 const locationTemplate = './views/location.njk'
+const aboutTemplate = './views/about.njk' 
 nunjucks.configure('views', { autoescape: true })
 
+
+createHTMLFile(aboutTemplate, {}, './dist/about.html') 
 createHTMLFile(menuTemplate, { menu }, './dist/index.html')
 createHTMLFile(locationTemplate, {}, './dist/location.html')
 
